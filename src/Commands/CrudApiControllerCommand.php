@@ -84,7 +84,7 @@ class CrudApiControllerCommand extends GeneratorCommand
     {
         $stub = $this->files->get($this->getStub());
 
-        $crudName = strtolower($this->option('crud-name'));
+        $crudName = camel_case($this->option('crud-name'));
         $crudNameSingular = str_singular($crudName);
         $modelName = $this->option('model-name');
         $modelNamespace = $this->option('model-namespace');

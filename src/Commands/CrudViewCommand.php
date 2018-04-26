@@ -269,7 +269,7 @@ class CrudViewCommand extends Command
             : __DIR__ . '/../stubs/views/' . $formHelper . '/';
 
 
-        $this->crudName = strtolower($this->argument('name'));
+        $this->crudName = camel_case($this->argument('name'));
         $this->varName = lcfirst($this->argument('name'));
         $this->crudNameCap = ucwords($this->crudName);
         $this->crudNameSingular = str_singular($this->crudName);
